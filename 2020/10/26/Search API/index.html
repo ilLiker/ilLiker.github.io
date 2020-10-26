@@ -7,13 +7,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My New Post - Hexo</title>
+  <title>Search API - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
 
   
   
+  <meta name="description" content="Search APIRequest Body Sear..."> 
   
   <meta name="author" content="John Doe"> 
 
@@ -106,7 +107,7 @@
 
 <nav class="navbar">
   <div class="left"></div>
-  <div class="center">My New Post</div>
+  <div class="center">Search API</div>
   <div class="right">
     
       <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
@@ -138,25 +139,31 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">My New Post</h1>
+    <h1 class="head-title">Search API</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 17, 2020</span
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 26, 2020</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>0</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>456</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        
+        <h1 id="Search-API"><a href="#Search-API" class="headerlink" title="Search API"></a>Search API</h1><h2 id="Request-Body-Search"><a href="#Request-Body-Search" class="headerlink" title="Request Body Search"></a>Request Body Search</h2><h3 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">GET</span> /_search</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;query&quot;</span> : &#123;</span><br><span class="line">        <span class="string">&quot;term&quot;</span> : &#123; <span class="string">&quot;user&quot;</span> : <span class="string">&quot;kimchy&quot;</span> &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="From-Size"><a href="#From-Size" class="headerlink" title="From/Size"></a>From/Size</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> /_search</span><br><span class="line">&#123;</span><br><span class="line">	&quot;from&quot;:<span class="number">0</span>,&quot;size&quot;:<span class="number">10</span>,</span><br><span class="line">	&quot;query&quot;:&#123;</span><br><span class="line">		&quot;term&quot;:&#123;&quot;user&quot;:&quot;elrei&quot;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">Note: form + size 不能大于<span class="keyword">index</span>.max_result_window 默认<span class="number">10000</span>;</span><br><span class="line">对于深度索引查看Scroll <span class="keyword">or</span> <span class="keyword">Search</span> <span class="keyword">After</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       </section>
       <section class="extra">
         
         <ul class="copyright">
   
   <li><strong>本文作者：</strong>John Doe</li>
-  <li><strong>本文链接：</strong><a href="http://example.com/2020/09/17/My-New-Post/index.html">http://example.com/2020/09/17/My-New-Post/index.html</a></li>
+  <li><strong>本文链接：</strong><a href="http://example.com/2020/10/26/Search%20API/index.html">http://example.com/2020/10/26/Search%20API/index.html</a></li>
   <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
       rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
   
@@ -177,8 +184,10 @@
         
 <nav class="nav">
   
-    <a href="/2020/10/26/ConcurrentHashMap/"><i class="iconfont iconleft"></i>ConcurrentHashMap</a>
+    <a href="/2020/10/26/Search%20APIS/"><i class="iconfont iconleft"></i>Search APIS</a>
   
+  
+    <a href="/2020/10/26/Query%20DSL/">Query DSL<i class="iconfont iconright"></i></a>
   
 </nav>
 
